@@ -8,9 +8,17 @@
 </head>
 <body>
 
-    <img src="/assets/random.jpg" alt="Perro random">
+    <div><img src="/assets/random.jpg" alt="Perro random"></div>
     <div><audio src="/assets/siuuu.mp3" controls></audio></div>
-    <video src="/assets/ramonvanidoso.mp4" controls></video>
+    <div><video src="/assets/ramonvanidoso.mp4" controls></video></div>
     <div><a href="index.html">Ir al inicio</a></div>
+    <div><button id="cambiar-color">Cambiar color</button></div>
+	<script>
+		document.getElementById("cambiar-color").addEventListener("click", function() {
+			var color = "#" + Math.floor(Math.random()*16777215).toString(16); /* Generar un color aleatorio */
+			document.body.style.backgroundColor = color; /* Cambiar el color de fondo de la página */
+		});
+	</script>
+    
 </body>
 </html>

@@ -12,5 +12,13 @@
     <h1>Pagina inicial</h1>
     <h2>Primer proyecto</h2>
     <a href="contacto.html">Ir a contacto</a>
+    <br><br>
+    <button id="cambiar-color">Cambiar color</button>
+	<script>
+		document.getElementById("cambiar-color").addEventListener("click", function() {
+			var color = "#" + Math.floor(Math.random()*16777215).toString(16); /* Generar un color aleatorio */
+			document.body.style.backgroundColor = color; /* Cambiar el color de fondo de la página */
+		});
+	</script>
 </body>
 </html>
